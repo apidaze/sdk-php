@@ -43,6 +43,13 @@ class Misc
      */
     public function validate()
     {
-        return $this->http->request(HttpMethods::GET, $this->endpoint);
+        $response = $this->http->request(HttpMethods::GET, $this->endpoint);
+        $body = json_decode($response->getBody(), true);
+
+        return [
+        "body" => $body,
+        "statusCode" => $response->getStatusCode(),
+        "headers" => $response->getHeaders()
+      ];
     }
 }

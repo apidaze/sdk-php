@@ -47,12 +47,19 @@ class Messages
      */
     public function send(string $origin, string $destination, string $body)
     {
-        $params = [
+        $payload = [
         "to" => $destination,
         "from" => $origin,
         "body" => $body
       ];
       
-        return $this->http->request(HttpMethods::POST, $this->endpoint, $params);
+        $response = $this->http->request(HttpMethods::POST, $this->endpoint, $payload);
+        $body = json_decode($response->getBody(), true);
+
+        return [
+        "body" => $body,
+        "statusCode" => $response->getStatusCode(),
+        "headers" => $response->getHeaders()
+      ];
     }
 }

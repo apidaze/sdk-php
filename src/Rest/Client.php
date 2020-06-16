@@ -6,6 +6,7 @@ use Apidaze\Rest\CdrHttpHandlers;
 use Apidaze\Rest\HttpClient;
 use Apidaze\Rest\Messages;
 use Apidaze\Rest\Misc;
+use Apidaze\Rest\Recordings;
 
 /**
  * A client for accessing the Apidaze API.
@@ -50,5 +51,6 @@ class Client
         $this->misc = new Misc($this->http);
         $this->cdrHttpHandlers = new CdrHttpHandlers($this->http);
         $this->messages = new Messages($this->http);
+        $this->recordings = new Recordings($this->http);
     }
 }

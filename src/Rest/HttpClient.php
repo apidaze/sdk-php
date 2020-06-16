@@ -105,14 +105,25 @@ class HttpClient
      * @param string $method
      * @param string $endpoint
      * @param array $payload
-     * @return array
+     * @return ResponseInterface
      * @throws \Psr\Http\Client\ClientExceptionInterface When no client to consume for HTTP requests found
      */
-    public function request(string $method, string $endpoint, array $payload = []): array
+    public function request(string $method, string $endpoint, array $payload = [], array $params = [])
     {
         $url = $this->baseUrl . $endpoint;
         $uri = $this->uriFactory->createUri($url);
-        $uri = $uri->withQuery('api_secret=' . $this->apiSecret);
+        
+        $query = [
+          'api_secret' => $this->apiSecret
+        ];
+
+        if (!empty($params)) {
+            $query = array_merge($query, $params);
+        }
+
+        $query = \http_build_query($query);
+        $uri = $uri->withQuery($query);
+
         $headers = $this->getHeadersWithDefault();
         $request = $this->requestFactory->createRequest($method, $uri);
 
@@ -127,13 +138,8 @@ class HttpClient
         }
 
         $response = $this->httpClient->sendRequest($request);
-        $body = json_decode($response->getBody(), true);
-
-        return [
-            "body" => $body,
-            "statusCode" => $response->getStatusCode(),
-            "headers" => $response->getHeaders()
-        ];
+        
+        return $response;
     }
 
     /**
