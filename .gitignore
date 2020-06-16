@@ -1,0 +1,12 @@
+# Environments
+.env
+env/
+ENV/
+env.bak/
+
+vendor
+composer.phar
+.idea/
+.vscode/
+*.cache
+.phpdoc/
