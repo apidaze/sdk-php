@@ -1,0 +1,47 @@
+{
+  "name": "apidaze/sdk",
+  "description": "The PHP bindings for the Apidaze API",
+  "type": "library",
+  "keywords": [
+    "cpaas",
+    "telecommunication",
+    "call",
+    "sms",
+    "api"
+  ],
+  "require": {
+    "php": "^7.2",
+    "php-http/httplug": "^2.1",
+    "php-http/client-implementation": "^1.0",
+    "php-http/discovery": "^1.0"
+  },
+  "require-dev": {
+    "vlucas/phpdotenv": "^4.1",
+    "php-http/mock-client": "^1.0",
+    "php-http/guzzle6-adapter": "^2.0",
+    "http-interop/http-factory-guzzle": "^1.0",
+    "phpunit/phpunit": "^8.5",
+    "friendsofphp/php-cs-fixer": "^2.16"
+  },
+  "autoload": {
+    "psr-4": {
+      "Apidaze\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Apidaze\\Tests\\": "tests/"
+    }
+  },
+  "minimum-stability": "stable",
+  "scripts": {
+    "test": "phpunit",
+    "lint": "php-cs-fixer fix --dry-run --stop-on-violation",
+    "lint:fix": "php-cs-fixer fix ",
+    "docs:generate": "php phpDocumentor.phar"
+  },
+  "scripts-descriptions": {
+    "test": "Run all tests",
+    "lint:fix": "Automatically fix the findings with the linter"
+  }
+}
