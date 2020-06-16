@@ -6,11 +6,11 @@ use Apidaze\Rest\HttpClient;
 use Apidaze\Rest\HttpMethods;
 
 /**
- * A client for accessing the Cdr Http Handler related endpoints.
+ * A client for accessing the Recordings related endpoints.
  *
  * @package Apidaze\Rest
  */
-class CdrHttpHandlers
+class Recordings
 {
     /**
      * A HTTP client
@@ -24,10 +24,10 @@ class CdrHttpHandlers
      *
      * @var string
      */
-    protected $endpoint = '/cdrhttphandlers';
+    protected $endpoint = '/recordings';
 
     /**
-     * Instantiates a CdrHttpHandlers client.
+     * Instantiates a Recordings client.
      *
      * @param HttpClient $http A pre-authenticated HTTP client to consume
      */
@@ -37,7 +37,7 @@ class CdrHttpHandlers
     }
 
     /**
-     * Shows CDR handlers list
+     * Shows recordings list
      *
      * @return array The response
      */
@@ -54,49 +54,43 @@ class CdrHttpHandlers
     }
 
     /**
-     * Creates a new CDR HTTP Handler.
-     * This will post the call detail (after a call) to the
-     * webhook URL you define.
+     * Gets raw WAVE data for a recording by filename
      *
-     * @param string $url URL of your application
-     * @param string $name Your App name
+     * @param string $filename Name of the recordings file.
+     * @param string $description Description of your download.
      *
      * @return array The response
      */
-    public function create(string $url, string $name)
+    public function get(string $filename, string $description = "")
     {
-        $payload = [
-        "url" => $url,
-        "name" => $name
+        $params = [
+        "name" => $filename,
+        "description" => $description
       ];
 
-        $response = $this->http->request(HttpMethods::POST, $this->endpoint, $payload);
-        $body = json_decode($response->getBody(), true);
+        $response = $this->http->request(HttpMethods::GET, $this->endpoint . "/" . $filename, [], $params);
 
         return [
-        "body" => $body,
+        "body" => $response->getBody(),
         "statusCode" => $response->getStatusCode(),
         "headers" => $response->getHeaders()
       ];
     }
 
     /**
-     * Updates your current CDR HTTP Handler.
+     * Removes a recording by filename
      *
-     * @param int $id ID of your CDR handler
-     * @param string $url URL of your application
-     * @param string $name Your App name
+     * @param string $filename Name of the recordings file.
      *
      * @return array The response
      */
-    public function update(int $id, string $url, string $name)
+    public function remove(string $filename)
     {
-        $payload = [
-        "url" => $url,
-        "name" => $name
+        $params = [
+        "name" => $filename,
       ];
 
-        $response = $this->http->request(HttpMethods::PUT, $this->endpoint . '/' . strval($id), $payload);
+        $response = $this->http->request(HttpMethods::DELETE, $this->endpoint . "/" . $filename, [], $params);
         $body = json_decode($response->getBody(), true);
 
         return [

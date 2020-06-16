@@ -21,10 +21,14 @@ class HttpClientTest extends TestCase
         $instance = $this->createInstance();
         $response = $instance->request(HttpMethods::GET, '/sample');
 
-        $this->assertSame($response['statusCode'], 200);
-        $this->assertNull($response['body']);
-        $this->assertIsArray($response['headers']);
-        $this->assertEmpty($response['headers']);
+        $body = $response->getBody()->getContents();
+        $statusCode = $response->getStatusCode();
+        $headers = $response->getHeaders();
+
+        $this->assertSame($statusCode, 200);
+        $this->assertEmpty($body);
+        $this->assertIsArray($headers);
+        $this->assertEmpty($headers);
     }
 
     public function testFailingRequestOnTooFewArguments()
