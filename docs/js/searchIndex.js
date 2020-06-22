@@ -51,15 +51,45 @@ Search.appendIndex(
             "summary": "a\u0020Miscellaneous\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_misc"
         },                {
-            "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024media",
-            "name": "media",
+            "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024mediaFiles",
+            "name": "mediaFiles",
             "summary": "",
-            "url": "../classes/Apidaze-Rest-Client.html#property_media"
+            "url": "../classes/Apidaze-Rest-Client.html#property_mediaFiles"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024sipUsers",
             "name": "sipUsers",
             "summary": "",
             "url": "../classes/Apidaze-Rest-Client.html#property_sipUsers"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Response",
+            "name": "Response",
+            "summary": "Response\u0020class\u0020used\u0020to\u0020simplify\u0020each\u0020client",
+            "url": "../classes/Apidaze-Rest-Response.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Response\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Initialize\u0020the\u0020Response\u0020class",
+            "url": "../classes/Apidaze-Rest-Response.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Response\u003A\u003A\u0024body",
+            "name": "body",
+            "summary": "JSON\u0020response",
+            "url": "../classes/Apidaze-Rest-Response.html#property_body"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Response\u003A\u003A\u0024streamBody",
+            "name": "streamBody",
+            "summary": "Stream\u0020interface\u0020response",
+            "url": "../classes/Apidaze-Rest-Response.html#property_streamBody"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Response\u003A\u003A\u0024headers",
+            "name": "headers",
+            "summary": "Response\u0020headers",
+            "url": "../classes/Apidaze-Rest-Response.html#property_headers"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Response\u003A\u003A\u0024statusCode",
+            "name": "statusCode",
+            "summary": "Response\u0020status\u0020code",
+            "url": "../classes/Apidaze-Rest-Response.html#property_statusCode"
         },                {
             "fqsen": "\\Apidaze\\Rest\\HttpClient",
             "name": "HttpClient",
@@ -120,6 +150,11 @@ Search.appendIndex(
             "name": "uriFactory",
             "summary": "",
             "url": "../classes/Apidaze-Rest-HttpClient.html#property_uriFactory"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\HttpClient\u003A\u003A\u0024streamFactory",
+            "name": "streamFactory",
+            "summary": "",
+            "url": "../classes/Apidaze-Rest-HttpClient.html#property_streamFactory"
         },                {
             "fqsen": "\\Apidaze\\Rest\\HttpMethods",
             "name": "HttpMethods",
@@ -211,19 +246,264 @@ Search.appendIndex(
             "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
             "url": "../classes/Apidaze-Rest-CdrHttpHandlers.html#property_endpoint"
         },                {
+            "fqsen": "\\Apidaze\\Builder\\Builder",
+            "name": "Builder",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Builder.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Builder\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Builder.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Builder\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Builder.html#method_add"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Builder\u003A\u003AgetDocument\u0028\u0029",
+            "name": "getDocument",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Builder.html#method_getDocument"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Builder\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Builder.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Answer",
+            "name": "Answer",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Answer.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Answer\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Answer.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Answer\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Answer.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode",
+            "name": "BaseNode",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003Aadd\u0028\u0029",
+            "name": "add",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method_add"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003AgetElement\u0028\u0029",
+            "name": "getElement",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method_getElement"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003AgetDocument\u0028\u0029",
+            "name": "getDocument",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method_getDocument"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003A__toString\u0028\u0029",
+            "name": "__toString",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method___toString"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003AasXML\u0028\u0029",
+            "name": "asXML",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method_asXML"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003A\u0024children",
+            "name": "children",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#property_children"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003A\u0024attributes",
+            "name": "attributes",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#property_attributes"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Record",
+            "name": "Record",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Record.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Record\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Record.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Record\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Record.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Wait",
+            "name": "Wait",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Wait.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Wait\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Wait.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Work",
+            "name": "Work",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Work.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Work\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Work.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Work\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Work.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles",
+            "name": "MediaFiles",
+            "summary": "A\u0020client\u0020for\u0020accessing\u0020the\u0020Media\u0020Files\u0020related\u0020endpoints.",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020a\u0020MediaFiles\u0020client.",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003Alist\u0028\u0029",
+            "name": "list",
+            "summary": "List\u0020all\u0020Mediafiles\u0020for\u0020an\u0020application.",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#method_list"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Download\u0020a\u0020Mediafile.",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#method_get"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003Asummary\u0028\u0029",
+            "name": "summary",
+            "summary": "Show\u0020a\u0020Mediafile\u0020summary.",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#method_summary"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Delete\u0020a\u0020Mediafile\u0020from\u0020an\u0020application.",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#method_remove"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003Aupload\u0028\u0029",
+            "name": "upload",
+            "summary": "Upload\u0020a\u0020Mediafile\u0020for\u0020an\u0020application.",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#method_upload"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003A\u0024http",
+            "name": "http",
+            "summary": "A\u0020HTTP\u0020client",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#property_http"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\MediaFiles\u003A\u003A\u0024endpoint",
+            "name": "endpoint",
+            "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
+            "url": "../classes/Apidaze-Rest-MediaFiles.html#property_endpoint"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Messages",
+            "name": "Messages",
+            "summary": "A\u0020client\u0020for\u0020accessing\u0020the\u0020Messages\u0020related\u0020endpoints.",
+            "url": "../classes/Apidaze-Rest-Messages.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Messages\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020a\u0020Messages\u0020client.",
+            "url": "../classes/Apidaze-Rest-Messages.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Messages\u003A\u003Asend\u0028\u0029",
+            "name": "send",
+            "summary": "Sends\u0020SMS\u0020to\u0020destination",
+            "url": "../classes/Apidaze-Rest-Messages.html#method_send"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Messages\u003A\u003A\u0024http",
+            "name": "http",
+            "summary": "A\u0020HTTP\u0020client",
+            "url": "../classes/Apidaze-Rest-Messages.html#property_http"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Messages\u003A\u003A\u0024endpoint",
+            "name": "endpoint",
+            "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
+            "url": "../classes/Apidaze-Rest-Messages.html#property_endpoint"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Recordings",
+            "name": "Recordings",
+            "summary": "A\u0020client\u0020for\u0020accessing\u0020the\u0020Recordings\u0020related\u0020endpoints.",
+            "url": "../classes/Apidaze-Rest-Recordings.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Recordings\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020a\u0020Recordings\u0020client.",
+            "url": "../classes/Apidaze-Rest-Recordings.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Recordings\u003A\u003Alist\u0028\u0029",
+            "name": "list",
+            "summary": "Shows\u0020recordings\u0020list",
+            "url": "../classes/Apidaze-Rest-Recordings.html#method_list"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Recordings\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Gets\u0020raw\u0020WAVE\u0020data\u0020for\u0020a\u0020recording\u0020by\u0020filename",
+            "url": "../classes/Apidaze-Rest-Recordings.html#method_get"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Recordings\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Removes\u0020a\u0020recording\u0020by\u0020filename",
+            "url": "../classes/Apidaze-Rest-Recordings.html#method_remove"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Recordings\u003A\u003A\u0024http",
+            "name": "http",
+            "summary": "A\u0020HTTP\u0020client",
+            "url": "../classes/Apidaze-Rest-Recordings.html#property_http"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Recordings\u003A\u003A\u0024endpoint",
+            "name": "endpoint",
+            "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
+            "url": "../classes/Apidaze-Rest-Recordings.html#property_endpoint"
+        },                {
             "fqsen": "\\",
             "name": "\\",
             "summary": "",
             "url": "../namespaces/default.html"
         },                {
-            "fqsen": "\\Apidaze\\Rest",
-            "name": "Rest",
+            "fqsen": "\\Apidaze\\Builder",
+            "name": "Builder",
             "summary": "",
-            "url": "../namespaces/apidaze-rest.html"
+            "url": "../namespaces/apidaze-builder.html"
         },                {
             "fqsen": "\\Apidaze",
             "name": "Apidaze",
             "summary": "",
             "url": "../namespaces/apidaze.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes",
+            "name": "Nodes",
+            "summary": "",
+            "url": "../namespaces/apidaze-builder-nodes.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest",
+            "name": "Rest",
+            "summary": "",
+            "url": "../namespaces/apidaze-rest.html"
         }            ]
 );
