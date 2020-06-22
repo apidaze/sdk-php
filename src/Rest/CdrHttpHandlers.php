@@ -43,14 +43,7 @@ class CdrHttpHandlers
      */
     public function list()
     {
-        $response = $this->http->request(HttpMethods::GET, $this->endpoint);
-        $body = json_decode($response->getBody(), true);
-
-        return [
-        "body" => $body,
-        "statusCode" => $response->getStatusCode(),
-        "headers" => $response->getHeaders()
-      ];
+        return $this->http->request(HttpMethods::GET, $this->endpoint);
     }
 
     /**
@@ -70,14 +63,7 @@ class CdrHttpHandlers
         "name" => $name
       ];
 
-        $response = $this->http->request(HttpMethods::POST, $this->endpoint, $payload);
-        $body = json_decode($response->getBody(), true);
-
-        return [
-        "body" => $body,
-        "statusCode" => $response->getStatusCode(),
-        "headers" => $response->getHeaders()
-      ];
+        return $this->http->request(HttpMethods::POST, $this->endpoint, $payload);
     }
 
     /**
@@ -96,13 +82,6 @@ class CdrHttpHandlers
         "name" => $name
       ];
 
-        $response = $this->http->request(HttpMethods::PUT, $this->endpoint . '/' . strval($id), $payload);
-        $body = json_decode($response->getBody(), true);
-
-        return [
-        "body" => $body,
-        "statusCode" => $response->getStatusCode(),
-        "headers" => $response->getHeaders()
-      ];
+        return $this->http->request(HttpMethods::PUT, $this->endpoint . '/' . strval($id), $payload);
     }
 }
