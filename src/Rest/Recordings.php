@@ -43,14 +43,7 @@ class Recordings
      */
     public function list()
     {
-        $response = $this->http->request(HttpMethods::GET, $this->endpoint);
-        $body = json_decode($response->getBody(), true);
-
-        return [
-        "body" => $body,
-        "statusCode" => $response->getStatusCode(),
-        "headers" => $response->getHeaders()
-      ];
+        return $this->http->request(HttpMethods::GET, $this->endpoint);
     }
 
     /**
@@ -68,13 +61,7 @@ class Recordings
         "description" => $description
       ];
 
-        $response = $this->http->request(HttpMethods::GET, $this->endpoint . "/" . $filename, [], $params);
-
-        return [
-        "body" => $response->getBody(),
-        "statusCode" => $response->getStatusCode(),
-        "headers" => $response->getHeaders()
-      ];
+        return $this->http->request(HttpMethods::GET, $this->endpoint . "/" . $filename, [], $params);
     }
 
     /**
@@ -90,13 +77,6 @@ class Recordings
         "name" => $filename,
       ];
 
-        $response = $this->http->request(HttpMethods::DELETE, $this->endpoint . "/" . $filename, [], $params);
-        $body = json_decode($response->getBody(), true);
-
-        return [
-        "body" => $body,
-        "statusCode" => $response->getStatusCode(),
-        "headers" => $response->getHeaders()
-      ];
+        return $this->http->request(HttpMethods::DELETE, $this->endpoint . "/" . $filename, [], $params);
     }
 }

@@ -21,9 +21,9 @@ class HttpClientTest extends TestCase
         $instance = $this->createInstance();
         $response = $instance->request(HttpMethods::GET, '/sample');
 
-        $body = $response->getBody()->getContents();
-        $statusCode = $response->getStatusCode();
-        $headers = $response->getHeaders();
+        $body = $response->body;
+        $statusCode = $response->statusCode;
+        $headers = $response->headers;
 
         $this->assertSame($statusCode, 200);
         $this->assertEmpty($body);

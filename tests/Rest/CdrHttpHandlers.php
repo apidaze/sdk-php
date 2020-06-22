@@ -43,9 +43,9 @@ class CdrHttpHandlersTest extends TestCase
 
         $response = $instance->list();
 
-        $this->assertSame($response['statusCode'], $statusCode);
-        $this->assertSame($response['body'], $body);
-        $this->assertSame($response['headers'], $headers);
+        $this->assertSame($response->statusCode, $statusCode);
+        $this->assertSame($response->body, $body);
+        $this->assertSame($response->headers, $headers);
     }
 
     public function testCreate()
@@ -68,9 +68,9 @@ class CdrHttpHandlersTest extends TestCase
 
         $response = $instance->create("http://exmaple.com/cdr-handler", "CDR Handler");
 
-        $this->assertSame($response['statusCode'], $statusCode);
-        $this->assertSame($response['body'], $body);
-        $this->assertSame($response['headers'], $headers);
+        $this->assertSame($response->statusCode, $statusCode);
+        $this->assertSame($response->body, $body);
+        $this->assertSame($response->headers, $headers);
     }
 
     public function testUpdate()
@@ -93,9 +93,9 @@ class CdrHttpHandlersTest extends TestCase
 
         $response = $instance->update(101, "http://exmaple.com/cdr-handler", "CDR Handler");
 
-        $this->assertSame($response['statusCode'], $statusCode);
-        $this->assertSame($response['body'], $body);
-        $this->assertSame($response['headers'], $headers);
+        $this->assertSame($response->statusCode, $statusCode);
+        $this->assertSame($response->body, $body);
+        $this->assertSame($response->headers, $headers);
     }
 
 

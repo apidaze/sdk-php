@@ -53,13 +53,6 @@ class Messages
         "body" => $body
       ];
       
-        $response = $this->http->request(HttpMethods::POST, $this->endpoint, $payload);
-        $body = json_decode($response->getBody(), true);
-
-        return [
-        "body" => $body,
-        "statusCode" => $response->getStatusCode(),
-        "headers" => $response->getHeaders()
-      ];
+        return $this->http->request(HttpMethods::POST, $this->endpoint, $payload);
     }
 }

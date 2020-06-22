@@ -1,11 +1,11 @@
 <?php
 
 use Apidaze\Rest\HttpClient;
-use Apidaze\Rest\Recordings;
+use Apidaze\Rest\MediaFiles;
 use Http\Mock\Client;
 use PHPUnit\Framework\TestCase;
 
-class RecordingsTest extends TestCase
+class MediaFilesTest extends TestCase
 {
     protected $apiKey = 'API_KEY';
     protected $apiSecret = 'API_SECRET';
@@ -27,8 +27,8 @@ class RecordingsTest extends TestCase
     {
         $instance = $this->createInstances();
 
-        $body = [ "status" => [
-        "test1", "test2", "test3"
+        $body = [ "body" => [
+        "file.wav", "newFile.wav", "test.wav"
         ]];
         $encodedBody = json_encode($body);
 
@@ -54,18 +54,18 @@ class RecordingsTest extends TestCase
         $mockResponse = $this->createResponse($body, $statusCode, $headers);
         $this->mockHttpClient->addResponse($mockResponse);
 
-        $response = $instance->get("my_recording.wav");
+        $response = $instance->get("my_mediaFile.wav");
 
         $this->assertSame($response->statusCode, $statusCode);
         $this->assertEquals($response->streamBody, $body);
         $this->assertSame($response->headers, $headers);
     }
 
-    public function testRemove()
+    public function testSummary()
     {
         $instance = $this->createInstances();
 
-        $body = [ "status" => "OK" ];
+        $body = [];
         $encodedBody = json_encode($body);
 
         $statusCode = 200;
@@ -73,12 +73,52 @@ class RecordingsTest extends TestCase
         $mockResponse = $this->createResponse($encodedBody, $statusCode, $headers);
         $this->mockHttpClient->addResponse($mockResponse);
 
-        $response = $instance->remove("my_recording.wav");
+        $response = $instance->summary("my_mediaFile.wav");
 
         $this->assertSame($response->statusCode, $statusCode);
         $this->assertSame($response->body, $body);
         $this->assertSame($response->headers, $headers);
     }
+
+    public function testRemove()
+    {
+        $instance = $this->createInstances();
+
+        $body = [];
+        $encodedBody = json_encode($body);
+
+        $statusCode = 204;
+        $headers = [];
+        $mockResponse = $this->createResponse($encodedBody, $statusCode, $headers);
+        $this->mockHttpClient->addResponse($mockResponse);
+
+        $response = $instance->remove("my_mediaFile.wav");
+
+        $this->assertSame($response->statusCode, $statusCode);
+        $this->assertEquals($response->body, $body);
+        $this->assertSame($response->headers, $headers);
+    }
+
+    public function testUpload()
+    {
+        $name = "myNewFilename";
+        $instance = $this->createInstances();
+
+        $body = [ "body" => "Ok, file saved as " . $name];
+        $encodedBody = json_encode($body);
+
+        $statusCode = 200;
+        $headers = [];
+        $mockResponse = $this->createResponse($encodedBody, $statusCode, $headers);
+        $this->mockHttpClient->addResponse($mockResponse);
+
+        $response = $instance->upload("mediafile.wav", $name);
+
+        $this->assertSame($response->statusCode, $statusCode);
+        $this->assertEquals($response->body, $body);
+        $this->assertSame($response->headers, $headers);
+    }
+
 
     public function createResponse($body, int $statusCode = null, array $headers = [])
     {
@@ -93,6 +133,6 @@ class RecordingsTest extends TestCase
     public function createInstances()
     {
         $httpClient = new HttpClient($this->apiKey, $this->apiSecret, $this->apiUrl, $this->mockHttpClient);
-        return new Recordings($httpClient);
+        return new MediaFiles($httpClient);
     }
 }
