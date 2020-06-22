@@ -13,6 +13,55 @@ use Psr\Http\Message\StreamInterface;
 use Psr\Http\Message\UriFactoryInterface;
 
 /**
+ * Response class used to simplify each client
+ *
+ * @package Apidaze\Rest
+ */
+class Response
+{
+    /**
+     * JSON response
+     *
+     * @var array
+     */
+    public $body;
+
+    /**
+     * Stream interface response
+     *
+     * @var StreamInterface
+     */
+    public $streamBody;
+
+    /**
+     * Response headers
+     *
+     * @var array
+     */
+    public $headers;
+
+    /**
+     * Response status code
+     *
+     * @var int
+     */
+    public $statusCode;
+
+    /**
+     * Initialize the Response class
+     *
+     * @param ResponseInterface $response The response
+     */
+    public function __construct($response)
+    {
+        $this->body = json_decode($response->getBody(), true);
+        $this->streamBody = $response->getBody();
+        $this->statusCode = $response->getStatusCode();
+        $this->headers = $response->getHeaders();
+    }
+}
+
+/**
  * An HTTP client
  *
  * @package Apidaze\Rest
@@ -65,6 +114,11 @@ class HttpClient
     private $uriFactory;
 
     /**
+     * @var StreamFactory
+     */
+    public $streamFactory;
+
+    /**
      * Instantiates an HTTP client.
      *
      * @param string $apiKey API key to authenticate with
@@ -108,7 +162,7 @@ class HttpClient
      * @return ResponseInterface
      * @throws \Psr\Http\Client\ClientExceptionInterface When no client to consume for HTTP requests found
      */
-    public function request(string $method, string $endpoint, array $payload = [], array $params = [])
+    public function request(string $method, string $endpoint, $payload = null, array $params = [], array $headers = [])
     {
         $url = $this->baseUrl . $endpoint;
         $uri = $this->uriFactory->createUri($url);
@@ -124,22 +178,25 @@ class HttpClient
         $query = \http_build_query($query);
         $uri = $uri->withQuery($query);
 
-        $headers = $this->getHeadersWithDefault();
+        $headers = $this->getHeadersWithDefault($headers);
         $request = $this->requestFactory->createRequest($method, $uri);
 
         foreach ($headers as $key => $value) {
             $request = $request->withHeader($key, $value);
         }
         
-        if (!empty($payload)) {
-            $encodedPayload = json_encode($payload);
-            $payload = $this->streamFactory->createStream($encodedPayload);
+        if (!is_null($payload)) {
+            if (is_array($payload)) {
+                $encodedPayload = json_encode($payload);
+                $payload = $this->streamFactory->createStream($encodedPayload);
+            }
+
             $request = $request->withBody($payload);
         }
 
         $response = $this->httpClient->sendRequest($request);
         
-        return $response;
+        return new Response($response);
     }
 
     /**

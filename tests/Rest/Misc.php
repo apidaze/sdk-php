@@ -35,9 +35,9 @@ class MiscTest extends TestCase
 
         $response = $instance->validate();
 
-        $this->assertSame($response['statusCode'], $statusCode);
-        $this->assertSame($response['body'], $body);
-        $this->assertSame($response['headers'], $headers);
+        $this->assertSame($response->statusCode, $statusCode);
+        $this->assertSame($response->body, $body);
+        $this->assertSame($response->headers, $headers);
     }
 
     public function createResponse(array $body = null, int $statusCode = null, array $headers = [])

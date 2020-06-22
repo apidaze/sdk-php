@@ -4,6 +4,7 @@ namespace Apidaze\Rest;
 
 use Apidaze\Rest\CdrHttpHandlers;
 use Apidaze\Rest\HttpClient;
+use Apidaze\Rest\MediaFiles;
 use Apidaze\Rest\Messages;
 use Apidaze\Rest\Misc;
 use Apidaze\Rest\Recordings;
@@ -34,7 +35,7 @@ class Client
      * @var \Apidaze\Rest\Misc
      */
     public $misc;
-    public $media;
+    public $mediaFiles;
     public $sipUsers;
 
     /**
@@ -52,5 +53,6 @@ class Client
         $this->cdrHttpHandlers = new CdrHttpHandlers($this->http);
         $this->messages = new Messages($this->http);
         $this->recordings = new Recordings($this->http);
+        $this->mediaFiles = new MediaFiles($this->http);
     }
 }
