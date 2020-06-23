@@ -12,13 +12,22 @@ use Apidaze\Rest\Client as Apidaze;
 
 $apidazeClient = new Apidaze($apiKey, $apiSecret);
 
-$response = $apidazeClient->mediaFiles->list();
-$response = $apidazeClient->mediaFiles->summary("mediafile.wav");
-// $filename = "mediafile.wav";
-// $response = $apidazeClient->mediaFiles->get($filename);
-// \file_put_contents($filename, $response['body']);
 
-// $response = $apidazeClient->mediaFiles->remove("newFile1234.wav");
-// $response = $apidazeClient->mediaFiles->upload("mediafile.wav", "newFile098");
+// 1
+$response = $apidazeClient->mediaFiles->list();
+
+// 2
+// $response = $apidazeClient->mediaFiles->summary("mediafile.wav");
+
+// 3
+// $filename = "apidazeintro.wav";
+// $response = $apidazeClient->mediaFiles->get($filename);
+// \file_put_contents($filename, $response->streamBody);
+
+// 4
+// $response = $apidazeClient->mediaFiles->remove("mediafile.wav");
+
+// 5
+// $response = $apidazeClient->mediaFiles->upload("mediafile.wav", "newFile123131");
 
 print_r($response);
