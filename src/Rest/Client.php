@@ -2,7 +2,9 @@
 
 namespace Apidaze\Rest;
 
+use Apidaze\Rest\Calls;
 use Apidaze\Rest\CdrHttpHandlers;
+use Apidaze\Rest\ExternalScripts;
 use Apidaze\Rest\HttpClient;
 use Apidaze\Rest\MediaFiles;
 use Apidaze\Rest\Messages;
@@ -17,25 +19,73 @@ use Apidaze\Rest\Recordings;
 class Client
 {
     /**
-     * a Http client
+     * The Http client
      *
      * @var \Apidaze\Rest\HttpClient
      */
     public $http;
 
-    public $applications;
-    public $messages;
-    public $externalScripts;
-    public $calls;
-    public $cdrHttpHandlers;
-    public $recordings;
     /**
-     * a Miscellaneous client
+     * The Applications client
+     *
+     * @var \Apidaze\Rest\Applications
+     */
+    public $applications;
+
+    /**
+     * The Messages client
+     *
+     * @var \Apidaze\Rest\Messages
+     */
+    public $messages;
+
+    /**
+     * The ExternalScripts client
+     *
+     * @var \Apidaze\Rest\ExternalScripts
+     */
+    public $externalScripts;
+
+    /**
+     * The Calls client
+     *
+     * @var \Apidaze\Rest\Calls
+     */
+    public $calls;
+
+    /**
+     * The CdrHttpHandlers client
+     *
+     * @var \Apidaze\Rest\CdrHttpHandlers
+     */
+    public $cdrHttpHandlers;
+
+    /**
+     * The Recordings client
+     *
+     * @var \Apidaze\Rest\Recordings
+     */
+    public $recordings;
+
+    /**
+     * The Miscellaneous client
      *
      * @var \Apidaze\Rest\Misc
      */
     public $misc;
+
+    /**
+     * The MediaFiles client
+     *
+     * @var \Apidaze\Rest\MediaFiles
+     */
     public $mediaFiles;
+
+    /**
+     * The SipUsers client
+     *
+     * @var \Apidaze\Rest\SipUsers
+     */
     public $sipUsers;
 
     /**
@@ -53,6 +103,8 @@ class Client
         $this->cdrHttpHandlers = new CdrHttpHandlers($this->http);
         $this->messages = new Messages($this->http);
         $this->recordings = new Recordings($this->http);
+        $this->externalScripts = new ExternalScripts($this->http);
         $this->mediaFiles = new MediaFiles($this->http);
+        $this->calls = new Calls($this->http);
     }
 }
