@@ -10,6 +10,7 @@ use Apidaze\Rest\MediaFiles;
 use Apidaze\Rest\Messages;
 use Apidaze\Rest\Misc;
 use Apidaze\Rest\Recordings;
+use Apidaze\Rest\SipUsers;
 
 /**
  * A client for accessing the Apidaze API.
@@ -105,6 +106,7 @@ class Client
         $this->recordings = new Recordings($this->http);
         $this->externalScripts = new ExternalScripts($this->http);
         $this->mediaFiles = new MediaFiles($this->http);
+        $this->sipUsers = new SipUsers($this->http);
         $this->calls = new Calls($this->http);
     }
 }
