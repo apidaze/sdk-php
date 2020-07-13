@@ -11,54 +11,74 @@ Search.appendIndex(
             "summary": "Instantiates\u0020an\u0020Apidaze\u0020client.",
             "url": "../classes/Apidaze-Rest-Client.html#method___construct"
         },                {
+            "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003AgetClientByAppId\u0028\u0029",
+            "name": "getClientByAppId",
+            "summary": "Returns\u0020the\u0020Apidaze\u0020Client\u0020class\u0020based\u0020on\u0020the\u0020application\u0020id.",
+            "url": "../classes/Apidaze-Rest-Client.html#method_getClientByAppId"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003AgetClientByApiKey\u0028\u0029",
+            "name": "getClientByApiKey",
+            "summary": "Returns\u0020the\u0020Apidaze\u0020Client\u0020class\u0020based\u0020on\u0020the\u0020api\u0020key.",
+            "url": "../classes/Apidaze-Rest-Client.html#method_getClientByApiKey"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003AgetClientByName\u0028\u0029",
+            "name": "getClientByName",
+            "summary": "Returns\u0020the\u0020Apidaze\u0020Client\u0020class\u0020based\u0020on\u0020the\u0020application\u0020name.",
+            "url": "../classes/Apidaze-Rest-Client.html#method_getClientByName"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A__getClientForAppData\u0028\u0029",
+            "name": "__getClientForAppData",
+            "summary": "",
+            "url": "../classes/Apidaze-Rest-Client.html#method___getClientForAppData"
+        },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024http",
             "name": "http",
-            "summary": "a\u0020Http\u0020client",
+            "summary": "The\u0020Http\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_http"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024applications",
             "name": "applications",
-            "summary": "",
+            "summary": "The\u0020Applications\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_applications"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024messages",
             "name": "messages",
-            "summary": "",
+            "summary": "The\u0020Messages\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_messages"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024externalScripts",
             "name": "externalScripts",
-            "summary": "",
+            "summary": "The\u0020ExternalScripts\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_externalScripts"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024calls",
             "name": "calls",
-            "summary": "",
+            "summary": "The\u0020Calls\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_calls"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024cdrHttpHandlers",
             "name": "cdrHttpHandlers",
-            "summary": "",
+            "summary": "The\u0020CdrHttpHandlers\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_cdrHttpHandlers"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024recordings",
             "name": "recordings",
-            "summary": "",
+            "summary": "The\u0020Recordings\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_recordings"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024misc",
             "name": "misc",
-            "summary": "a\u0020Miscellaneous\u0020client",
+            "summary": "The\u0020Miscellaneous\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_misc"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024mediaFiles",
             "name": "mediaFiles",
-            "summary": "",
+            "summary": "The\u0020MediaFiles\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_mediaFiles"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Client\u003A\u003A\u0024sipUsers",
             "name": "sipUsers",
-            "summary": "",
+            "summary": "The\u0020SipUsers\u0020client",
             "url": "../classes/Apidaze-Rest-Client.html#property_sipUsers"
         },                {
             "fqsen": "\\Apidaze\\Rest\\Response",
@@ -480,6 +500,191 @@ Search.appendIndex(
             "name": "endpoint",
             "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
             "url": "../classes/Apidaze-Rest-Recordings.html#property_endpoint"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications",
+            "name": "Applications",
+            "summary": "A\u0020client\u0020for\u0020accessing\u0020the\u0020Applications\u0020related\u0020endpoints.",
+            "url": "../classes/Apidaze-Rest-Applications.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020a\u0020Applications\u0020client.",
+            "url": "../classes/Apidaze-Rest-Applications.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications\u003A\u003Alist\u0028\u0029",
+            "name": "list",
+            "summary": "Shows\u0020sub\u002Dapplications\u0020list",
+            "url": "../classes/Apidaze-Rest-Applications.html#method_list"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications\u003A\u003AgetByAppId\u0028\u0029",
+            "name": "getByAppId",
+            "summary": "Shows\u0020application\u0020with\u0020id",
+            "url": "../classes/Apidaze-Rest-Applications.html#method_getByAppId"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications\u003A\u003AgetByApiKey\u0028\u0029",
+            "name": "getByApiKey",
+            "summary": "Shows\u0020application\u0020with\u0020api_key",
+            "url": "../classes/Apidaze-Rest-Applications.html#method_getByApiKey"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications\u003A\u003AgetByName\u0028\u0029",
+            "name": "getByName",
+            "summary": "Shows\u0020application\u0020with\u0020name",
+            "url": "../classes/Apidaze-Rest-Applications.html#method_getByName"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications\u003A\u003A\u0024http",
+            "name": "http",
+            "summary": "A\u0020HTTP\u0020client",
+            "url": "../classes/Apidaze-Rest-Applications.html#property_http"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Applications\u003A\u003A\u0024endpoint",
+            "name": "endpoint",
+            "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
+            "url": "../classes/Apidaze-Rest-Applications.html#property_endpoint"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls",
+            "name": "Calls",
+            "summary": "A\u0020client\u0020for\u0020accessing\u0020the\u0020Calls\u0020related\u0020endpoints.",
+            "url": "../classes/Apidaze-Rest-Calls.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020a\u0020Calls\u0020client.",
+            "url": "../classes/Apidaze-Rest-Calls.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls\u003A\u003Alist\u0028\u0029",
+            "name": "list",
+            "summary": "Shows\u0020active\u0020calls\u0020list",
+            "url": "../classes/Apidaze-Rest-Calls.html#method_list"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls\u003A\u003Aplace\u0028\u0029",
+            "name": "place",
+            "summary": "Places\u0020a\u0020call\u0020to\u0020a\u0020phone\u0020number\u0020or\u0020SIP\u0020account",
+            "url": "../classes/Apidaze-Rest-Calls.html#method_place"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Shows\u0020active\u0020call\u0020with\u0020specific\u0020UUID",
+            "url": "../classes/Apidaze-Rest-Calls.html#method_get"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls\u003A\u003Aterminate\u0028\u0029",
+            "name": "terminate",
+            "summary": "Hangs\u0020up\u0020active\u0020call\u0020with\u0020UUID",
+            "url": "../classes/Apidaze-Rest-Calls.html#method_terminate"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls\u003A\u003A\u0024http",
+            "name": "http",
+            "summary": "A\u0020HTTP\u0020client",
+            "url": "../classes/Apidaze-Rest-Calls.html#property_http"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\Calls\u003A\u003A\u0024endpoint",
+            "name": "endpoint",
+            "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
+            "url": "../classes/Apidaze-Rest-Calls.html#property_endpoint"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\CallType",
+            "name": "CallType",
+            "summary": "An\u0020abstraction\u0020class\u0020used\u0020for\u0020describing\u0020the\u0020type\u0020of\u0020call",
+            "url": "../classes/Apidaze-Rest-CallType.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\CallType\u003A\u003Anumber",
+            "name": "number",
+            "summary": "",
+            "url": "../classes/Apidaze-Rest-CallType.html#constant_number"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\CallType\u003A\u003Asipaccount",
+            "name": "sipaccount",
+            "summary": "",
+            "url": "../classes/Apidaze-Rest-CallType.html#constant_sipaccount"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\ExternalScripts",
+            "name": "ExternalScripts",
+            "summary": "A\u0020client\u0020for\u0020accessing\u0020the\u0020ExternalScripts\u0020related\u0020endpoints.",
+            "url": "../classes/Apidaze-Rest-ExternalScripts.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\ExternalScripts\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020a\u0020ExternalScripts\u0020client.",
+            "url": "../classes/Apidaze-Rest-ExternalScripts.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\ExternalScripts\u003A\u003Alist\u0028\u0029",
+            "name": "list",
+            "summary": "Shows\u0020external\u0020scripts\u0020list",
+            "url": "../classes/Apidaze-Rest-ExternalScripts.html#method_list"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\ExternalScripts\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Shows\u0020specific\u0020external\u0020script\u0020by\u0020id",
+            "url": "../classes/Apidaze-Rest-ExternalScripts.html#method_get"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\ExternalScripts\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "Updates\u0020the\u0020external\u0020script\u0020with\u0020given\u0020id.",
+            "url": "../classes/Apidaze-Rest-ExternalScripts.html#method_update"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\ExternalScripts\u003A\u003A\u0024http",
+            "name": "http",
+            "summary": "A\u0020HTTP\u0020client",
+            "url": "../classes/Apidaze-Rest-ExternalScripts.html#property_http"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\ExternalScripts\u003A\u003A\u0024endpoint",
+            "name": "endpoint",
+            "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
+            "url": "../classes/Apidaze-Rest-ExternalScripts.html#property_endpoint"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers",
+            "name": "SipUsers",
+            "summary": "A\u0020client\u0020for\u0020accessing\u0020the\u0020SipUsers\u0020related\u0020endpoints.",
+            "url": "../classes/Apidaze-Rest-SipUsers.html"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020a\u0020SipUsers\u0020client.",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003Alist\u0028\u0029",
+            "name": "list",
+            "summary": "Shows\u0020a\u0020list\u0020of\u0020existing\u0020SIP\u0020users",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method_list"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003Acreate\u0028\u0029",
+            "name": "create",
+            "summary": "Create\u0020a\u0020SIP\u0020User\u0020for\u0020devices\u0020to\u0020register\u0020to\u0020Apidaze\u0020Freeswitches",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method_create"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003Aremove\u0028\u0029",
+            "name": "remove",
+            "summary": "Delete\u0020a\u0020SIP\u0020User\u0020registered\u0020to\u0020an\u0020Apidaze\u0020Freeswitch.",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method_remove"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003Aget\u0028\u0029",
+            "name": "get",
+            "summary": "Shows\u0020the\u0020details\u0020of\u0020a\u0020single\u0020SIP\u0020User.",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method_get"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003Aupdate\u0028\u0029",
+            "name": "update",
+            "summary": "Update\u0020a\u0020SIP\u0020User.",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method_update"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003Astatus\u0028\u0029",
+            "name": "status",
+            "summary": "Show\u0020the\u0020status\u0020of\u0020a\u0020SIP\u0020User.",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method_status"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003AresetPassword\u0028\u0029",
+            "name": "resetPassword",
+            "summary": "Reset\u0020the\u0020password\u0020for\u0020a\u0020SIP\u0020User.",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#method_resetPassword"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003A\u0024http",
+            "name": "http",
+            "summary": "A\u0020HTTP\u0020client",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#property_http"
+        },                {
+            "fqsen": "\\Apidaze\\Rest\\SipUsers\u003A\u003A\u0024endpoint",
+            "name": "endpoint",
+            "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
+            "url": "../classes/Apidaze-Rest-SipUsers.html#property_endpoint"
         },                {
             "fqsen": "\\",
             "name": "\\",
