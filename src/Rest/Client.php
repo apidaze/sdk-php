@@ -107,6 +107,61 @@ class Client
         $this->externalScripts = new ExternalScripts($this->http);
         $this->mediaFiles = new MediaFiles($this->http);
         $this->sipUsers = new SipUsers($this->http);
+        $this->applications = new Applications($this->http);
         $this->calls = new Calls($this->http);
+    }
+
+    /**
+     * Returns the Apidaze Client class based on the application id.
+     *
+     * @param int $appId Id of the sub-application
+     *
+     * @return Client Apidaze Client object
+     */
+
+    public function getClientByAppId(int $appId): Client
+    {
+        $appData = $this->applications->getByAppId($appId);
+        return $this->__getClientForAppData($appData->body[0]);
+    }
+
+    /**
+     * Returns the Apidaze Client class based on the api key.
+     *
+     * @param string $apiKey Api key of the sub-application
+     *
+     * @return Client Apidaze Client object
+     */
+
+    public function getClientByApiKey(string $apiKey): Client
+    {
+        $appData = $this->applications->getByApiKey($apiKey);
+        return $this->__getClientForAppData($appData->body[0]);
+    }
+
+    /**
+     * Returns the Apidaze Client class based on the application name.
+     *
+     * @param string $name Name of the sub-application
+     *
+     * @return Client Apidaze Client object
+     */
+
+    public function getClientByName(string $name): Client
+    {
+        $appData = $this->applications->getByName($name);
+        return $this->__getClientForAppData($appData->body[0]);
+    }
+
+    private function __getClientForAppData(array $appData)
+    {
+        $apiKey = $appData["api_key"];
+        $apiSecret = $appData["api_secret"];
+
+        if (empty($apiKey) || empty($apiSecret)) {
+            throw new Exception('Api Key or Api Secret are not present in the app data');
+        }
+
+        return new Client($apiKey, $apiSecret);
     }
 }
