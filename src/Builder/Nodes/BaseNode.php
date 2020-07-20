@@ -66,4 +66,19 @@ abstract class BaseNode
     {
         return (string)$this;
     }
+
+    public function xmlToTest(): string
+    {
+        $document = new DOMDocument();
+        $document->formatOutput = true;
+        $document->preserveWhiteSpace = false;
+        $child = $this->getElement($document);
+        $document->appendChild($child);
+        return $document->saveXML($child);
+    }
+
+    public function boolToString(bool $booleanVal): string
+    {
+        return $booleanVal ? "true" : "false";
+    }
 }

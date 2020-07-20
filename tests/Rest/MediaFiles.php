@@ -112,7 +112,7 @@ class MediaFilesTest extends TestCase
         $mockResponse = $this->createResponse($encodedBody, $statusCode, $headers);
         $this->mockHttpClient->addResponse($mockResponse);
 
-        $response = $instance->upload("mediafile.wav", $name);
+        $response = $instance->upload("resources/apidazeintro.wav", $name);
 
         $this->assertSame($response->statusCode, $statusCode);
         $this->assertEquals($response->body, $body);

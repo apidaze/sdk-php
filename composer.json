@@ -14,7 +14,9 @@
     "php-http/httplug": "^2.1",
     "php-http/client-implementation": "^1.0",
     "php-http/discovery": "^1.0",
-    "php-http/multipart-stream-builder": "^1.1"
+    "php-http/multipart-stream-builder": "^1.1",
+    "amphp/http-server-router": "^1.0",
+    "amphp/log": "^1.1"
   },
   "require-dev": {
     "vlucas/phpdotenv": "^4.1",
@@ -22,7 +24,8 @@
     "php-http/guzzle6-adapter": "^2.0",
     "http-interop/http-factory-guzzle": "^1.0",
     "phpunit/phpunit": "^8.5",
-    "friendsofphp/php-cs-fixer": "^2.16"
+    "friendsofphp/php-cs-fixer": "^2.16",
+    "monolog/monolog": "^2.1"
   },
   "autoload": {
     "psr-4": {

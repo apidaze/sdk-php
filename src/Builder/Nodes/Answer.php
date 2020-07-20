@@ -1,16 +1,21 @@
 <?php
 
-
 namespace Apidaze\Builder\Nodes;
 
 use Apidaze\Builder\Nodes\BaseNode;
 
+/**
+ * Answer the call immediately. Useful if your want to play a sound file using the playback tag.
+ */
 class Answer extends BaseNode
 {
     protected $name = 'answer';
 
-    public function __construct(array $attributes = [])
+    /**
+     * Instantiates the Answer node.
+     */
+    public function __construct()
     {
-        parent::__construct(null, $attributes);
+        parent::__construct(null);
     }
 }
