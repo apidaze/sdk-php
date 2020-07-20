@@ -81,10 +81,10 @@
         <aside class="phpdocumentor-element-found-in">
             <abbr class="phpdocumentor-element-found-in__file" title="src/Builder/Nodes/Record.php"><a href="../files/src-builder-nodes-record.html"><abbr title="src/Builder/Nodes/Record.php">Record.php</abbr></a></abbr>
             :
-            <span class="phpdocumentor-element-found-in__line">8</span>
+            <span class="phpdocumentor-element-found-in__line">10</span>
         </aside>
 
-        <p class="phpdocumentor-class__summary"></p>
+        <p class="phpdocumentor-class__summary">Record the call.</p>
         <section class="phpdocumentor-class__description"></section>
 
         <h3>Table of Contents</h3>
@@ -111,7 +111,7 @@
                 </tr>
                                         <tr>
                     <th class="phpdocumentor-heading"><a href="../classes/Apidaze-Builder-Nodes-Record.html#method___construct">__construct()</a></th>
-                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">Instantiates the Record node.</td>
                     <td class="phpdocumentor-cell">mixed</td>
                 </tr>
                                                     <tr>
@@ -144,6 +144,16 @@
                     <td class="phpdocumentor-cell"></td>
                     <td class="phpdocumentor-cell">string</td>
                 </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Apidaze-Builder-Nodes-BaseNode.html#method_xmlToTest">xmlToTest()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
+                            <tr>
+                    <th class="phpdocumentor-heading"><a href="../classes/Apidaze-Builder-Nodes-BaseNode.html#method_boolToString">boolToString()</a></th>
+                    <td class="phpdocumentor-cell"></td>
+                    <td class="phpdocumentor-cell">string</td>
+                </tr>
                     </table>
 
         
@@ -160,7 +170,7 @@
     <aside class="phpdocumentor-element-found-in">
         <abbr class="phpdocumentor-element-found-in__file" title="src/Builder/Nodes/Record.php"><a href="../files/src-builder-nodes-record.html"><abbr title="src/Builder/Nodes/Record.php">Record.php</abbr></a></abbr>
         :
-        <span class="phpdocumentor-element-found-in__line">10</span>
+        <span class="phpdocumentor-element-found-in__line">12</span>
     </aside>
         <code class="phpdocumentor-signature phpdocumentor-code ">
         <span class="phpdocumentor-signature__visibility">protected</span>
@@ -240,15 +250,28 @@
     <aside class="phpdocumentor-element-found-in">
         <abbr class="phpdocumentor-element-found-in__file" title="src/Builder/Nodes/Record.php"><a href="../files/src-builder-nodes-record.html"><abbr title="src/Builder/Nodes/Record.php">Record.php</abbr></a></abbr>
         :
-        <span class="phpdocumentor-element-found-in__line">12</span>
+        <span class="phpdocumentor-element-found-in__line">24</span>
     </aside>
+        <p class="phpdocumentor-summary">Instantiates the Record node.</p>
         <code class="phpdocumentor-signature phpdocumentor-code ">
         <span class="phpdocumentor-signature__visibility">public</span>
                                 <span class="phpdocumentor-signature__name">__construct</span>(
                     <span class="phpdocumentor-signature__argument">
-            [                <span class="phpdocumentor-signature__argument__name">$attributes</span> :
-                <span class="phpdocumentor-signature__argument__return-type">array</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">[]</span> ]            </span>
+            [                <span class="phpdocumentor-signature__argument__name">$name</span> :
+                <span class="phpdocumentor-signature__argument__return-type">string</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">null</span> ]            </span>
+                    <span class="phpdocumentor-signature__argument">
+            [,                 <span class="phpdocumentor-signature__argument__name">$onAnswered</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span> ]            </span>
+                    <span class="phpdocumentor-signature__argument">
+            [,                 <span class="phpdocumentor-signature__argument__name">$aleg</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">true</span> ]            </span>
+                    <span class="phpdocumentor-signature__argument">
+            [,                 <span class="phpdocumentor-signature__argument__name">$bleg</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">true</span> ]            </span>
                 )
         : <span class="phpdocumentor-signature__response_type">mixed</span>
     </code>
@@ -257,10 +280,27 @@
             <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
         <dl class="phpdocumentor-argument-list">
                             <dt class="phpdocumentor-argument-list__entry">
-                    <span class="phpdocumentor-signature__argument__name">$attributes</span>
-                    : <span class="phpdocumentor-signature__argument__return-type">array</span>
-                     = <span class="phpdocumentor-signature__argument__default-value">[]</span>                </dt>
-                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    <span class="phpdocumentor-signature__argument__name">$name</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">null</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>The name you want to give to your recording file.
+NOTE: There is no suffix in your filename, it is
+automatically suffixed with &quot;.wav&quot;. Default is UUID of call.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$onAnswered</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">false</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Starts recording when the call is answered.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$aleg</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">true</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Record the A-leg of the call.. caller to callee.</p></section></dd>
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$bleg</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                     = <span class="phpdocumentor-signature__argument__default-value">true</span>                </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"><p>Record the B-leg of the call.. callee to caller.</p></section></dd>
                     </dl>
     
         
@@ -469,6 +509,72 @@
     </code>
 
     
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            
+</article>
+                                    <a id="method_xmlToTest"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">xmlToTest()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Builder/Nodes/BaseNode.php"><a href="../files/src-builder-nodes-basenode.html"><abbr title="src/Builder/Nodes/BaseNode.php">BaseNode.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">70</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">xmlToTest</span>(
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+    
+    
+        
+            <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+        <span class="phpdocumentor-signature__response_type">string</span>
+            
+</article>
+                                    <a id="method_boolToString"></a>
+<article
+        class="
+            phpdocumentor-method
+            phpdocumentor-method--public
+                                                        "
+>
+    <h4 class="phpdocumentor-method__name">boolToString()</h4>
+    <aside class="phpdocumentor-element-found-in">
+        <abbr class="phpdocumentor-element-found-in__file" title="src/Builder/Nodes/BaseNode.php"><a href="../files/src-builder-nodes-basenode.html"><abbr title="src/Builder/Nodes/BaseNode.php">BaseNode.php</abbr></a></abbr>
+        :
+        <span class="phpdocumentor-element-found-in__line">80</span>
+    </aside>
+        <code class="phpdocumentor-signature phpdocumentor-code ">
+        <span class="phpdocumentor-signature__visibility">public</span>
+                                <span class="phpdocumentor-signature__name">boolToString</span>(
+                    <span class="phpdocumentor-signature__argument">
+                            <span class="phpdocumentor-signature__argument__name">$booleanVal</span> :
+                <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                            </span>
+                )
+        : <span class="phpdocumentor-signature__response_type">string</span>
+    </code>
+
+    
+            <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+        <dl class="phpdocumentor-argument-list">
+                            <dt class="phpdocumentor-argument-list__entry">
+                    <span class="phpdocumentor-signature__argument__name">$booleanVal</span>
+                    : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                                    </dt>
+                <dd class="phpdocumentor-argument-list__definition"><section class="phpdocumentor-description"></section></dd>
+                    </dl>
     
         
             <h5 class="phpdocumentor-return-value__heading">Return values</h5>
