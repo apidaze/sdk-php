@@ -293,12 +293,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Answer",
             "name": "Answer",
-            "summary": "",
+            "summary": "Answer\u0020the\u0020call\u0020immediately.\u0020Useful\u0020if\u0020your\u0020want\u0020to\u0020play\u0020a\u0020sound\u0020file\u0020using\u0020the\u0020playback\u0020tag.",
             "url": "../classes/Apidaze-Builder-Nodes-Answer.html"
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Answer\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Instantiates\u0020the\u0020Answer\u0020node.",
             "url": "../classes/Apidaze-Builder-Nodes-Answer.html#method___construct"
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Answer\u003A\u003A\u0024name",
@@ -341,6 +341,16 @@ Search.appendIndex(
             "summary": "",
             "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method_asXML"
         },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003AxmlToTest\u0028\u0029",
+            "name": "xmlToTest",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method_xmlToTest"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003AboolToString\u0028\u0029",
+            "name": "boolToString",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-BaseNode.html#method_boolToString"
+        },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\BaseNode\u003A\u003A\u0024name",
             "name": "name",
             "summary": "",
@@ -358,12 +368,12 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Record",
             "name": "Record",
-            "summary": "",
+            "summary": "Record\u0020the\u0020call.",
             "url": "../classes/Apidaze-Builder-Nodes-Record.html"
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Record\u003A\u003A__construct\u0028\u0029",
             "name": "__construct",
-            "summary": "",
+            "summary": "Instantiates\u0020the\u0020Record\u0020node.",
             "url": "../classes/Apidaze-Builder-Nodes-Record.html#method___construct"
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Record\u003A\u003A\u0024name",
@@ -373,7 +383,7 @@ Search.appendIndex(
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Wait",
             "name": "Wait",
-            "summary": "",
+            "summary": "Suspend\u0020the\u0020execution\u0020for\u0020a\u0020while.",
             "url": "../classes/Apidaze-Builder-Nodes-Wait.html"
         },                {
             "fqsen": "\\Apidaze\\Builder\\Nodes\\Wait\u003A\u003A\u0024name",
@@ -685,6 +695,221 @@ Search.appendIndex(
             "name": "endpoint",
             "summary": "The\u0020base\u0020path\u0020to\u0020the\u0020endpoint\u0028s\u0029\u0020for\u0020the\u0020respective\u0020client",
             "url": "../classes/Apidaze-Rest-SipUsers.html#property_endpoint"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Bind",
+            "name": "Bind",
+            "summary": "Get\u0020the\u0020digits\u0020dialed,\u0020and\u0020take\u0020an\u0020action.\u0020Digits\u0020are\u0020accepted,\nand\u0020regular\u0020expressions\u0020too,\u0020the\u0020XML\u0020text\u0020must\u0020then\u0020start\u0020with\u0020\u007E.",
+            "url": "../classes/Apidaze-Builder-Nodes-Bind.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Bind\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Bind\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Bind.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Bind\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Bind.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Conference",
+            "name": "Conference",
+            "summary": "Join\u0020an\u0020audio\u0020conference.",
+            "url": "../classes/Apidaze-Builder-Nodes-Conference.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Conference\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Conference\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Conference.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Conference\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Conference.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\DialTargetType",
+            "name": "DialTargetType",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-DialTargetType.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\DialTargetType\u003A\u003Anumber",
+            "name": "number",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-DialTargetType.html#constant_number"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\DialTargetType\u003A\u003Asipacount",
+            "name": "sipacount",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-DialTargetType.html#constant_sipacount"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\DialTargetType\u003A\u003Asipuri",
+            "name": "sipuri",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-DialTargetType.html#constant_sipuri"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\DialStrategy",
+            "name": "DialStrategy",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-DialStrategy.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\DialStrategy\u003A\u003Asimultaneous",
+            "name": "simultaneous",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-DialStrategy.html#constant_simultaneous"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\DialStrategy\u003A\u003Asequence",
+            "name": "sequence",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-DialStrategy.html#constant_sequence"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Dial",
+            "name": "Dial",
+            "summary": "Place\u0020a\u0020call\u0020to\u0020a\u0020destination.\u0020A\u0020destination\u0020can\u0020be\u0020an\u0020external\u0020number,\na\u0020SIP\u0020account\u0020or\u0020a\u0020voicemail\u0020box.\u0020Multiple\u0020destinations\u0020can\u0020be\u0020dialed\nsimultaneously\u0020or\u0020in\u0020sequence.",
+            "url": "../classes/Apidaze-Builder-Nodes-Dial.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Dial\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Dial\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Dial.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Dial\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Dial.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\EchoNode",
+            "name": "EchoNode",
+            "summary": "Echo\u0020back\u0020received\u0020audio\u0020to\u0020the\u0020caller\u0020with\u0020some\u0020delay.",
+            "url": "../classes/Apidaze-Builder-Nodes-EchoNode.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\EchoNode\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Echo\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-EchoNode.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\EchoNode\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-EchoNode.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Hangup",
+            "name": "Hangup",
+            "summary": "Hangup\u0020the\u0020call\u0020immediately.\u0020Important\u0020note\u0020\u003A\u0020when\u0020a\u0020call\u0020is\u0020not\nexplicitly\u0020hung\u0020up,\u0020APIdaze\u0020will\u0020ask\u0020for\u0020more\u0020XML\u0020instructions\nby\u0020re\u002Dfetching\u0020the\u0020URL\u0020of\u0020the\u0020external\u0020script\u0020in\u0020case\u0020the\u0020last\u0020instruction\nhas\u0020been\u0020processed.",
+            "url": "../classes/Apidaze-Builder-Nodes-Hangup.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Hangup\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Hangup\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Hangup.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Hangup\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Hangup.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Intercept",
+            "name": "Intercept",
+            "summary": "Intercept\u0020a\u0020channel.\u0020The\u0020channel\u0020is\u0020identified\u0020by\u0020a\u0020UUID\u0020parameter\u0020that\nmust\u0020have\u0020been\u0020stored\u0020in\u0020some\u0020way\u0020by\u0020your\u0020script.\u0020You\u0020can\u0020map\u0020this\napplication\u0020with\u0020a\u0020dialing\u0020sequence\u0020\u0028e.g.\u0020\u003A\u0020\u002A8\u0029\u0020to\u0020implement\u0020group\u002Dpickup\nor\u0020directed\u002Dpickup\u0020functions.",
+            "url": "../classes/Apidaze-Builder-Nodes-Intercept.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Intercept\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Intercept\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Intercept.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Intercept\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Intercept.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Number",
+            "name": "Number",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Number.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Number\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Number.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Number\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Number.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Playback",
+            "name": "Playback",
+            "summary": "Play\u0020a\u0020sound\u0020file\u0020to\u0020the\u0020caller,\u0020accessible\u0020at\u0020a\u0020URL\u0020or\u0020locally.\u0020The\u0020file\nlocation\u0020can\u0020be\u0020set\u0020as\u0020a\u0020text\u0020enclosed\u0020in\u0020the\u0020tag,\u0020or\u0020in\u0020the\u0020\u201Cfile\u201D\nattribute.\u0020To\u0020be\u0020accessible\u0020locally,\u0020the\u0020file\u0020must\u0020have\u0020been\u0020uploaded\nusing\u0020the\u0020REST\u0020API,\u0020see\u0020the\u0020Media\u0020File\u0020actions\u0020in\u0020the\u0020API\u0020Reference\nsection.\u0020The\u0020file\u0020format\u0020must\u0020be\u0020.wav,\u0020sample\u0020frequency\u00208000Hz,\n1\u0020channel\u0020\u0028mono\u0029.",
+            "url": "../classes/Apidaze-Builder-Nodes-Playback.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Playback\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Playback\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Playback.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Playback\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Playback.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Ringback",
+            "name": "Ringback",
+            "summary": "Play\u0020a\u0020ringback\u0020tone\u0020or\u0020file\u0020to\u0020the\u0020caller.\u0020This\u0020action\u0020is\u0020non\u002Dblocking,\nthat\u0020is,\u0020the\u0020next\u0020XML\u0020instrunction\u0020will\u0020be\u0020executed\u0020without\u0020waiting.\u0020This\ncan\u0020be\u0020useful\u0020for\u0020example\u0020if\u0020you\u0020want\u0020to\u0020play\u0020a\u0020custom\u0020file\u0020with\u0020dialing\na\u0020number.",
+            "url": "../classes/Apidaze-Builder-Nodes-Ringback.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Ringback\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Ringback\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Ringback.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Ringback\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Ringback.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\SipAccount",
+            "name": "SipAccount",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-SipAccount.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\SipAccount\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-SipAccount.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\SipAccount\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-SipAccount.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\SipUri",
+            "name": "SipUri",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-SipUri.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\SipUri\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-SipUri.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\SipUri\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-SipUri.html#property_name"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Speak",
+            "name": "Speak",
+            "summary": "Say\u0020the\u0020text\u0020enclosed\u0020in\u0020the\u0020tag.",
+            "url": "../classes/Apidaze-Builder-Nodes-Speak.html"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Speak\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Instantiates\u0020the\u0020Speak\u0020node.",
+            "url": "../classes/Apidaze-Builder-Nodes-Speak.html#method___construct"
+        },                {
+            "fqsen": "\\Apidaze\\Builder\\Nodes\\Speak\u003A\u003A\u0024name",
+            "name": "name",
+            "summary": "",
+            "url": "../classes/Apidaze-Builder-Nodes-Speak.html#property_name"
         },                {
             "fqsen": "\\",
             "name": "\\",
