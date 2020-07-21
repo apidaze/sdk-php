@@ -119,7 +119,7 @@ Amp\Loop::run(function () {
 
   $router = new Router;
   $router->addRoute('GET', '/?', new CallableRequestHandler(function () {
-    return new Response(Status::OK, ['content-type' => 'text/xml'], intro("http://30e3b3153506.ngrok.io"));
+    return new Response(Status::OK, ['content-type' => 'text/xml'], intro("http://localhost"));
   }));
   $router->addRoute('GET', '/apidazeintro.wav', new CallableRequestHandler(function () {
     $size = filesize("resources/apidazeintro.wav");
