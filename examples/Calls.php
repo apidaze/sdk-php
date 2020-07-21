@@ -13,8 +13,11 @@ use Apidaze\Rest\CallType;
 
 $apidazeClient = new Apidaze($apiKey, $apiSecret);
 
-$response = $apidazeClient->calls->list();
-$response = $apidazeClient->calls->place("14125423968", "0000", "0000", CallType::number);
+$assignedDID = "14125423968";
+$myNumber = "00000‬";
+
+// $response = $apidazeClient->calls->list();
+$response = $apidazeClient->calls->place($assignedDID, $myNumber, $myNumber, CallType::number);
 // $response = $apidazeClient->calls->get("");
 // $response = $apidazeClient->calls->terminate("");
 
