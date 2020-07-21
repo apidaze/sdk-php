@@ -42,5 +42,3 @@ $script
 var_dump($script->asXML());
 // var_dump(strval($script));
 // var_dump((string) $script);
-
-print($answer->asXML());

@@ -46,7 +46,7 @@ function intro(string $localUrl) {
         ->add($speak)
         ->add($wait);
 
-  $speak = new Speak("Press 1 for an example of text to speech, press 2 to enter an echo line to check voice latency or press 3 to enter a conference.", 10000);
+  $speak = new Speak("Press 1 for an example of text to speech, press 2 to enter an echo line to check voice latency or press 3 to enter a conference.", "en-US", 10000);
   $bind1 = new Bind("1", $localUrl."/step1");
   $bind2 = new Bind("2", $localUrl."/step2");
   $bind3 = new Bind("3", $localUrl."/step3");
@@ -119,7 +119,7 @@ Amp\Loop::run(function () {
 
   $router = new Router;
   $router->addRoute('GET', '/?', new CallableRequestHandler(function () {
-    return new Response(Status::OK, ['content-type' => 'text/xml'], intro("http://localhost"));
+    return new Response(Status::OK, ['content-type' => 'text/xml'], intro("http://30e3b3153506.ngrok.io"));
   }));
   $router->addRoute('GET', '/apidazeintro.wav', new CallableRequestHandler(function () {
     $size = filesize("resources/apidazeintro.wav");
